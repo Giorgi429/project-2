@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ხატია ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Noto+Sans+Georgian:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<canvas id="particles"></canvas>
+
+<!-- ── NAV ARROWS ── -->
+<button class="arrow arrow-left"  id="arrowLeft"  onclick="changeSlide(-1)">&#10094;</button>
+<button class="arrow arrow-right" id="arrowRight" onclick="changeSlide(1)">&#10095;</button>
+
+<!-- ── DOTS ── -->
+<div class="dots" id="dots"></div>
+
+<!-- ── SLIDE COUNTER ── -->
+<div class="counter" id="counter">1 / 5</div>
+
+<!-- ══════════════════════════════
+     SLIDES
+══════════════════════════════ -->
+<div class="stage" id="stage">
+
+  <!-- ─── SLIDE 1: COVER ─── -->
+  <div class="slide s1 active">
+    <div class="s1-bg"></div>
+    <div class="s1-content">
+      <p class="eyebrow">✦ სპეციალური გზავნილი ✦</p>
+      <h1 class="cover-name">ხატია</h1>
+      <div class="cover-heart" id="coverHeart">❤️</div>
+      <p class="cover-sub">ეს გვერდი მხოლოდ <span class="gold">შენთვის</span> შეიქმნა</p>
+      <button class="btn-main" onclick="changeSlide(1)">გახსნა &nbsp;›</button>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 2: HERO PHOTO ─── -->
+  <div class="slide s2">
+    <div class="photo-full">
+      <img src="images/Photo%201.jpeg" alt="ფოტო" />
+      <div class="photo-overlay">
+        <p class="photo-caption">შენ ყველაზე ლამაზი ხარ</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 3: MESSAGE ─── -->
+  <div class="slide s3">
+    <div class="slide-inner">
+      <p class="eyebrow">✦ ჩემი გული ლაპარაკობს ✦</p>
+      <h2> ხატია</h2>
+      <div class="divider-line"></div>
+      <p class="message-text">
+        ყოველ დილას, სანამ ახალ დღეს ვიწყებ —<br />
+        <span class="gold">შენ ხარ პირველი ფიქრი.</span><br /><br />
+        შენი სიცილი, შენი სიტყვები, შენი თვალები —<br />
+        ყოველი წვრილმანი შენში სასწაულია.<br /><br />
+        <span class="italic-rose">.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- ─── SLIDE 4: GALLERY (8 photos) ─── -->
+  <div class="slide s4">
+    <div class="slide-inner gallery-slide">
+      <p class="eyebrow">✦ ჩვენი მომენტები ✦</p>
+      <h2>ჩემი <span class="gold">საყვარელი</span> კადრები</h2>
+      <div class="gallery">
+        <div class="gitem"><img src="images/WhatsApp%20Image%202026-06-04%20at%2010.07.51%20AM.jpeg"      alt="" /></div>
+        <div class="gitem"><img src="images/WhatsApp%20Image%202026-06-04%20at%2010.07.51%20AM%20(1).jpeg" alt="" /></div>
+        <div class="gitem"><img src="images/Photo%201.jpeg" alt="" /></div>
+        <div class="gitem"><img src="images/WhatsApp%20Image%202026-06-04%20at%2010.07.51%20AM%20(3).jpeg" alt="" /></div>
+        <div class="gitem"><img src="images/WhatsApp%20Image%202026-06-04%20at%2010.07.52%20AM.jpeg"      alt="" /></div>
+        <div class="gitem"><img src="images/WhatsApp%20Image%202026-06-04%20at%2010.07.52%20AM%20(1).jpeg" alt="" /></div>
+        <div class="gitem"><img src="images/WhatsApp%20Image%202026-06-04%20at%2010.07.52%20AM%20(2).jpeg" alt="" /></div>
+        <div class="gitem"><img src="images/WhatsApp%20Image%202026-06-04%20at%2010.07.52%20AM%20(3).jpeg" alt="" /></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ─── SLIDE 5: NO BUTTON ─── -->
+  <div class="slide s5">
+    <div class="fun-center">
+      <p class="eyebrow">✦ მნიშვნელოვანი კითხვა ✦</p>
+      <h2 class="fun-question">გიყვარვარ? 🥺</h2>
+      <div class="fun-btns">
+        <button class="btn-main btn-yes" onclick="yesClick()">კი 💖</button>
+        <button class="btn-main btn-no" id="btnNo">არა 🙅</button>
+      </div>
+      <p class="fun-msg" id="funMsg"></p>
+    </div>
+  </div>
+
+</div><!-- /stage -->
+
+<script src="script.js"></script>
+</body>
+</html>
